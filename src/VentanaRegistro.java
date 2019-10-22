@@ -45,10 +45,6 @@ public class VentanaRegistro extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblCreaTuCuenta = new JLabel("Crea tu cuenta");
-		lblCreaTuCuenta.setBounds(34, 13, 135, 36);
-		contentPane.add(lblCreaTuCuenta);
-		
 		JLabel lblEmail = new JLabel("Email:");
 		lblEmail.setBounds(12, 55, 56, 16);
 		contentPane.add(lblEmail);
@@ -114,5 +110,9 @@ public class VentanaRegistro extends JFrame {
 		textField_5.setBounds(140, 139, 116, 22);
 		contentPane.add(textField_5);
 		textField_5.setColumns(10);
+		
+		JLabel lblCreaTuCuenta = new JLabel("CREA TU CUENTA");
+		lblCreaTuCuenta.setBounds(51, 13, 140, 29);
+		contentPane.add(lblCreaTuCuenta);
 	}
 }
