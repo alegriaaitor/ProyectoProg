@@ -14,11 +14,13 @@ import java.awt.SystemColor;
 import javax.swing.UIManager;
 import javax.swing.JLabel;
 import javax.swing.JSeparator;
+import javax.swing.JSpinner;
+import java.awt.Font;
+import javax.swing.JPasswordField;
 
 public class VentanaPrincipal extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtIntroduzcaSuDestino;
 	private JTextField txtCheckIn;
 	private JTextField txtCheckOut;
 
@@ -50,19 +52,12 @@ public class VentanaPrincipal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		txtIntroduzcaSuDestino = new JTextField();
-		txtIntroduzcaSuDestino.setBackground(Color.WHITE);
-		txtIntroduzcaSuDestino.setText("Introduzca su destino");
-		txtIntroduzcaSuDestino.setBounds(36, 112, 295, 41);
-		contentPane.add(txtIntroduzcaSuDestino);
-		txtIntroduzcaSuDestino.setColumns(10);
-		
 		JButton btnBuscar = new JButton("Buscar");
 		btnBuscar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnBuscar.setBounds(121, 267, 126, 31);
+		btnBuscar.setBounds(119, 291, 126, 31);
 		contentPane.add(btnBuscar);
 		
 		txtCheckIn = new JTextField();
@@ -77,9 +72,6 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(txtCheckOut);
 		txtCheckOut.setColumns(10);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(36, 220, 295, 22);
-		contentPane.add(comboBox);
 		
 		JButton btnIniciarSesion = new JButton("Iniciar Sesion");
 		btnIniciarSesion.addActionListener(new ActionListener() {
@@ -93,24 +85,71 @@ public class VentanaPrincipal extends JFrame {
 		btnRegistrarse.setBounds(449, 23, 116, 25);
 		contentPane.add(btnRegistrarse);
 		
-		JLabel lblNewLabel = new JLabel("Busca tu hotel ideal \r\nentre miles de hoteles");
-		lblNewLabel.setBounds(354, 121, 222, 22);
+		JLabel lblNewLabel = new JLabel("\u2714Busca tu hotel ideal \r\nentre miles ");
+		lblNewLabel.setBounds(354, 117, 238, 22);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblComparaLosPrecios = new JLabel("Compara los precios de tus hoteles favoritos\r\n");
-		lblComparaLosPrecios.setBounds(354, 166, 211, 16);
+		JLabel lblComparaLosPrecios = new JLabel("\u2714Compara los precios de tus \r\n");
+		lblComparaLosPrecios.setBounds(354, 167, 211, 16);
 		contentPane.add(lblComparaLosPrecios);
 		
-		JLabel lblIniciaSesionPara = new JLabel("Inicia sesion para conseguir descuentos de hasta 30%");
-		lblIniciaSesionPara.setBounds(354, 256, 211, 16);
-		contentPane.add(lblIniciaSesionPara);
-		
-		JLabel lblNewLabel_1 = new JLabel("Cientos de opiniones de usuarios verificados\r\n");
-		lblNewLabel_1.setBounds(354, 211, 211, 16);
+		JLabel lblNewLabel_1 = new JLabel("\u2714Cientos de opiniones de usuarios \r\n");
+		lblNewLabel_1.setBounds(354, 217, 211, 16);
 		contentPane.add(lblNewLabel_1);
 		
 		JSeparator separator = new JSeparator();
 		separator.setBounds(36, 86, 242, 2);
 		contentPane.add(separator);
+		
+		JLabel lblNewLabel_2 = new JLabel("Hu\u00E9spedes");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_2.setBounds(36, 232, 78, 25);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblHabitaciones = new JLabel("Habitaciones");
+		lblHabitaciones.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblHabitaciones.setBounds(167, 232, 93, 25);
+		contentPane.add(lblHabitaciones);
+		
+		JSpinner spinner = new JSpinner();
+		spinner.setBounds(119, 228, 41, 39);
+		contentPane.add(spinner);
+		
+		JSpinner spinner_1 = new JSpinner();
+		spinner_1.setBounds(260, 226, 41, 39);
+		contentPane.add(spinner_1);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setToolTipText("");
+		comboBox.setBounds(36, 108, 295, 41);
+		contentPane.add(comboBox);
+		
+		comboBox.addItem("Seleccione la ciudad ");
+		comboBox.addItem("BILBAO ");
+		comboBox.addItem("MADRID ");
+		comboBox.addItem("BARCELONA ");
+		comboBox.addItem("SEVILLA ");
+		comboBox.addItem("SANTANDER ");
+		comboBox.addItem("VALENCIA ");
+		
+		JLabel lblNewLabel_3 = new JLabel("de hoteles");
+		lblNewLabel_3.setBounds(354, 137, 72, 16);
+		contentPane.add(lblNewLabel_3);
+		
+		JLabel lblHotelesFavoritos = new JLabel("hoteles favoritos");
+		lblHotelesFavoritos.setBounds(354, 187, 102, 16);
+		contentPane.add(lblHotelesFavoritos);
+		
+		JLabel lblNewLabel_4 = new JLabel("verificados");
+		lblNewLabel_4.setBounds(354, 237, 102, 16);
+		contentPane.add(lblNewLabel_4);
+		
+		JLabel lblDeHasta = new JLabel("30% de descuento en tus reservas\r\n");
+		lblDeHasta.setBounds(354, 287, 238, 16);
+		contentPane.add(lblDeHasta);
+		
+		JLabel lblIniciaSesionPara = new JLabel("\u2714Inicia sesion para conseguir hasta un");
+		lblIniciaSesionPara.setBounds(354, 266, 238, 16);
+		contentPane.add(lblIniciaSesionPara);
 	}
 }
