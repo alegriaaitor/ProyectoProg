@@ -13,6 +13,7 @@ import java.awt.Color;
 import java.awt.SystemColor;
 import javax.swing.UIManager;
 import javax.swing.JLabel;
+import javax.swing.JSeparator;
 
 public class VentanaPrincipal extends JFrame {
 
@@ -97,7 +98,19 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblComparaLosPrecios = new JLabel("Compara los precios de tus hoteles favoritos\r\n");
-		lblComparaLosPrecios.setBounds(354, 156, 211, 16);
+		lblComparaLosPrecios.setBounds(354, 166, 211, 16);
 		contentPane.add(lblComparaLosPrecios);
+		
+		JLabel lblIniciaSesionPara = new JLabel("Inicia sesion para conseguir descuentos de hasta 30%");
+		lblIniciaSesionPara.setBounds(354, 256, 211, 16);
+		contentPane.add(lblIniciaSesionPara);
+		
+		JLabel lblNewLabel_1 = new JLabel("Cientos de opiniones de usuarios verificados\r\n");
+		lblNewLabel_1.setBounds(354, 211, 211, 16);
+		contentPane.add(lblNewLabel_1);
+		
+		JSeparator separator = new JSeparator();
+		separator.setBounds(36, 86, 242, 2);
+		contentPane.add(separator);
 	}
 }
