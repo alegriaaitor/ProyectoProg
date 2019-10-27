@@ -72,7 +72,7 @@ public class VentanaRegistro extends JFrame {
 		contentPane.add(lblSiYaTienes);
 		
 		JButton btnIniciarSesin = new JButton("Iniciar sesi\u00F3n");
-		btnIniciarSesin.setBounds(304, 228, 116, 25);
+		btnIniciarSesin.setBounds(295, 215, 116, 25);
 		contentPane.add(btnIniciarSesin);
 		
 		JLabel lblDni = new JLabel("DNI:");
@@ -112,7 +112,7 @@ public class VentanaRegistro extends JFrame {
 		textField_5.setColumns(10);
 		
 		JLabel lblCreaTuCuenta = new JLabel("CREA TU CUENTA");
-		lblCreaTuCuenta.setBounds(51, 13, 140, 29);
+		lblCreaTuCuenta.setBounds(12, 13, 140, 29);
 		contentPane.add(lblCreaTuCuenta);
 	}
 }
