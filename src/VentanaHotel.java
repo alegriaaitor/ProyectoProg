@@ -16,6 +16,8 @@ public class VentanaHotel extends JFrame {
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JTextField textField_4;
+	private JTextField textField_5;
+	private JTextField textField_6;
 
 	/**
 	 * Launch the application.
@@ -69,12 +71,12 @@ public class VentanaHotel extends JFrame {
 		textField_1.setColumns(10);
 		
 		JLabel lblValoracion = new JLabel("Valoraci\u00F3n: ");
-		lblValoracion.setBounds(255, 87, 69, 16);
+		lblValoracion.setBounds(228, 75, 69, 16);
 		contentPane.add(lblValoracion);
 		
 		textField_2 = new JTextField();
 		textField_2.setEditable(false);
-		textField_2.setBounds(321, 84, 62, 22);
+		textField_2.setBounds(297, 72, 62, 22);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
@@ -97,5 +99,23 @@ public class VentanaHotel extends JFrame {
 		textField_4.setBounds(27, 229, 116, 22);
 		contentPane.add(textField_4);
 		textField_4.setColumns(10);
+		
+		JLabel lblOpinionesFavorables = new JLabel("Opiniones favorables: ");
+		lblOpinionesFavorables.setBounds(204, 131, 129, 16);
+		contentPane.add(lblOpinionesFavorables);
+		
+		textField_5 = new JTextField();
+		textField_5.setBounds(214, 148, 116, 22);
+		contentPane.add(textField_5);
+		textField_5.setColumns(10);
+		
+		JLabel lblOpinionesDesfavorables = new JLabel("Opiniones desfavorables:");
+		lblOpinionesDesfavorables.setBounds(204, 200, 155, 16);
+		contentPane.add(lblOpinionesDesfavorables);
+		
+		textField_6 = new JTextField();
+		textField_6.setBounds(214, 229, 116, 22);
+		contentPane.add(textField_6);
+		textField_6.setColumns(10);
 	}
 }
