@@ -57,7 +57,7 @@ public class VentanaPrincipal extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnBuscar.setBounds(119, 291, 126, 31);
+		btnBuscar.setBounds(119, 287, 126, 31);
 		contentPane.add(btnBuscar);
 		
 		txtCheckIn = new JTextField();
@@ -145,7 +145,7 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(lblNewLabel_4);
 		
 		JLabel lblDeHasta = new JLabel("30% de descuento en tus reservas\r\n");
-		lblDeHasta.setBounds(354, 287, 238, 16);
+		lblDeHasta.setBounds(354, 294, 238, 16);
 		contentPane.add(lblDeHasta);
 		
 		JLabel lblIniciaSesionPara = new JLabel("\u2714Inicia sesion para conseguir hasta un");
