@@ -8,18 +8,21 @@ try {
 Class.forName("org.sqlite.JDBC");
 
 
-Connection conn = DriverManager.getConnection("jdbc:sqlite:data/ejemplo.db");
+Connection conn = DriverManager.getConnection("jdbc:sqlite:data/Hoteles.db");
 Statement stmt = conn.createStatement();
 // conexion abierta
 // statement creado
-ResultSet rs = stmt.executeQuery("SELECT Nombre, Apellidos FROM usuarios");
+ResultSet rs = stmt.executeQuery("SELECT Nombre, Ciudad, Precio, Estrellas FROM Hoteles");
 
 while(rs.next()) {
-String nombre = rs.getString("nombre");
-String apellido = rs.getString("apellido");
+String nombre = rs.getString("Nombre");
+String ciudad = rs.getString("Ciudad");
+int precio = rs.getInt("Precio");
+int estrellas = rs.getInt("Estrellas");
 
 
-System.out.println("Nombre:" +nombre+ "apellido" +apellido );
+
+System.out.println("Nombre:" +nombre+ "ciudad" +ciudad + "precio: " + precio +"estrellas" + estrellas );
 }
 
 //ya no queremos usarla mas
