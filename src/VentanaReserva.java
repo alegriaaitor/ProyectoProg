@@ -146,7 +146,7 @@ public class VentanaReserva extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnNewButton.setBounds(422, 307, 115, 36);
+		btnNewButton.setBounds(404, 299, 115, 36);
 		contentPane.add(btnNewButton);
 		
 		JLabel lblCuentaPaypal = new JLabel("Cuenta Pay-pal");
