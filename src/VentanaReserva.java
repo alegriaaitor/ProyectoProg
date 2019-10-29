@@ -14,6 +14,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class VentanaReserva extends JFrame {
 
@@ -49,6 +50,7 @@ public class VentanaReserva extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 620, 410);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(230, 230, 250));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -101,11 +103,13 @@ public class VentanaReserva extends JFrame {
 		contentPane.add(spinner_2);
 		
 		JCheckBox chckbxNewCheckBox = new JCheckBox("Cancelaci\u00F3n gratis antes del check in");
+		chckbxNewCheckBox.setEnabled(false);
 		chckbxNewCheckBox.setSelected(true);
-		chckbxNewCheckBox.setBounds(10, 182, 232, 23);
+		chckbxNewCheckBox.setBounds(10, 182, 258, 23);
 		contentPane.add(chckbxNewCheckBox);
 		
 		JCheckBox chckbxNewCheckBox_1 = new JCheckBox("Sin pago por adelantado");
+		chckbxNewCheckBox_1.setEnabled(false);
 		chckbxNewCheckBox_1.setSelected(true);
 		chckbxNewCheckBox_1.setBounds(10, 208, 171, 23);
 		contentPane.add(chckbxNewCheckBox_1);
@@ -115,11 +119,11 @@ public class VentanaReserva extends JFrame {
 		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("Nombre");
-		lblNewLabel_4.setBounds(20, 243, 46, 14);
+		lblNewLabel_4.setBounds(20, 243, 63, 14);
 		contentPane.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("Apellidos");
-		lblNewLabel_5.setBounds(156, 243, 46, 14);
+		lblNewLabel_5.setBounds(156, 243, 71, 14);
 		contentPane.add(lblNewLabel_5);
 		
 		textField = new JTextField();

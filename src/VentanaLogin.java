@@ -83,6 +83,9 @@ public class VentanaLogin extends JFrame {
 		JButton btnNewButton = new JButton("Registrarse aqui");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				VentanaRegistro nuevaVentana = new VentanaRegistro();
+				nuevaVentana.setVisible(true);
+				VentanaLogin.this.dispose();
 			}
 		});
 		btnNewButton.setVerticalAlignment(SwingConstants.TOP);

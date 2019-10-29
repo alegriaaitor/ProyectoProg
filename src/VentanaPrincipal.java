@@ -76,12 +76,22 @@ public class VentanaPrincipal extends JFrame {
 		JButton btnIniciarSesion = new JButton("Iniciar Sesion");
 		btnIniciarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				VentanaLogin nuevaVentana = new VentanaLogin();
+				nuevaVentana.setVisible(true);
+				VentanaPrincipal.this.dispose();
 			}
 		});
 		btnIniciarSesion.setBounds(309, 23, 116, 25);
 		contentPane.add(btnIniciarSesion);
 		
 		JButton btnRegistrarse = new JButton("Registrarse");
+		btnRegistrarse.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaRegistro nuevaVentana = new VentanaRegistro();
+				nuevaVentana.setVisible(true);
+				VentanaPrincipal.this.dispose();
+			}
+		});
 		btnRegistrarse.setBounds(449, 23, 116, 25);
 		contentPane.add(btnRegistrarse);
 		
