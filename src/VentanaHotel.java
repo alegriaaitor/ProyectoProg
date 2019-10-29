@@ -7,6 +7,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.Font;
+import javax.swing.JTextArea;
 
 public class VentanaHotel extends JFrame {
 
@@ -14,10 +16,6 @@ public class VentanaHotel extends JFrame {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
 
 	/**
 	 * Launch the application.
@@ -40,82 +38,82 @@ public class VentanaHotel extends JFrame {
 	 */
 	public VentanaHotel() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 494, 350);
+		setBounds(100, 100, 624, 410);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JLabel lblHotel = new JLabel("Hotel:");
+		lblHotel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblHotel.setBounds(27, 25, 56, 16);
 		contentPane.add(lblHotel);
 		
 		textField = new JTextField();
 		textField.setEditable(false);
-		textField.setBounds(65, 19, 116, 22);
+		textField.setBounds(88, 22, 181, 22);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		JButton btnReservaTuApartamento = new JButton("Reserva tu apartamento");
-		btnReservaTuApartamento.setBounds(204, 18, 171, 25);
+		btnReservaTuApartamento.setBounds(382, 18, 171, 25);
 		contentPane.add(btnReservaTuApartamento);
 		
 		JLabel lblUbicacion = new JLabel("Ubicaci\u00F3n:");
-		lblUbicacion.setBounds(27, 75, 62, 16);
+		lblUbicacion.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblUbicacion.setBounds(27, 75, 79, 16);
 		contentPane.add(lblUbicacion);
 		
 		textField_1 = new JTextField();
 		textField_1.setEditable(false);
-		textField_1.setBounds(89, 69, 116, 22);
+		textField_1.setBounds(118, 73, 116, 22);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
 		JLabel lblValoracion = new JLabel("Valoraci\u00F3n: ");
-		lblValoracion.setBounds(228, 75, 69, 16);
+		lblValoracion.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblValoracion.setBounds(401, 74, 95, 16);
 		contentPane.add(lblValoracion);
 		
 		textField_2 = new JTextField();
 		textField_2.setEditable(false);
-		textField_2.setBounds(297, 72, 62, 22);
+		textField_2.setBounds(494, 73, 62, 22);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
 		JLabel lblDescripcion = new JLabel("Descripcion: ");
-		lblDescripcion.setBounds(27, 131, 74, 16);
+		lblDescripcion.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblDescripcion.setBounds(27, 131, 116, 16);
 		contentPane.add(lblDescripcion);
 		
-		textField_3 = new JTextField();
-		textField_3.setEditable(false);
-		textField_3.setBounds(27, 148, 116, 22);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
-		
 		JLabel lblqueServiosOfrece = new JLabel("\u00BFQue servios ofrece?");
-		lblqueServiosOfrece.setBounds(27, 200, 129, 16);
+		lblqueServiosOfrece.setBounds(27, 260, 129, 16);
 		contentPane.add(lblqueServiosOfrece);
 		
-		textField_4 = new JTextField();
-		textField_4.setEditable(false);
-		textField_4.setBounds(27, 229, 116, 22);
-		contentPane.add(textField_4);
-		textField_4.setColumns(10);
-		
 		JLabel lblOpinionesFavorables = new JLabel("Opiniones favorables: ");
-		lblOpinionesFavorables.setBounds(204, 131, 129, 16);
+		lblOpinionesFavorables.setBounds(415, 144, 129, 16);
 		contentPane.add(lblOpinionesFavorables);
 		
-		textField_5 = new JTextField();
-		textField_5.setBounds(214, 148, 116, 22);
-		contentPane.add(textField_5);
-		textField_5.setColumns(10);
-		
 		JLabel lblOpinionesDesfavorables = new JLabel("Opiniones desfavorables:");
-		lblOpinionesDesfavorables.setBounds(204, 200, 155, 16);
+		lblOpinionesDesfavorables.setBounds(415, 244, 155, 16);
 		contentPane.add(lblOpinionesDesfavorables);
 		
-		textField_6 = new JTextField();
-		textField_6.setBounds(214, 229, 116, 22);
-		contentPane.add(textField_6);
-		textField_6.setColumns(10);
+		JTextArea textArea = new JTextArea();
+		textArea.setEditable(false);
+		textArea.setBounds(27, 160, 342, 87);
+		contentPane.add(textArea);
+		
+		JTextArea textArea_1 = new JTextArea();
+		textArea_1.setEditable(false);
+		textArea_1.setBounds(27, 289, 342, 61);
+		contentPane.add(textArea_1);
+		
+		JTextArea textArea_2 = new JTextArea();
+		textArea_2.setBounds(408, 273, 171, 61);
+		contentPane.add(textArea_2);
+		
+		JTextArea textArea_3 = new JTextArea();
+		textArea_3.setBounds(411, 173, 168, 58);
+		contentPane.add(textArea_3);
 	}
 }
