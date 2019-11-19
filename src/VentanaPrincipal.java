@@ -118,7 +118,7 @@ public class VentanaPrincipal extends JFrame {
 		
 		JLabel lblHabitaciones = new JLabel("Habitaciones");
 		lblHabitaciones.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblHabitaciones.setBounds(167, 232, 93, 25);
+		lblHabitaciones.setBounds(168, 232, 93, 25);
 		contentPane.add(lblHabitaciones);
 		
 		JSpinner spinner = new JSpinner();
