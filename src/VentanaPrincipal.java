@@ -61,8 +61,8 @@ public class VentanaPrincipal extends JFrame {
 		JButton btnBuscar = new JButton("Buscar");
 		btnBuscar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
-				if(comboBox.getSelectedItem().toString().equals("BILBAO")) {
+				String value = (String) comboBox.getSelectedItem();
+				if(value.equals("BILBAO")) {
 					VentanaBilbao nuevaVentana = new VentanaBilbao();
 					nuevaVentana.setVisible(true);
 					VentanaPrincipal.this.dispose();
