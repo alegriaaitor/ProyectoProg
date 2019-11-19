@@ -58,12 +58,12 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(comboBox);
 		
 		comboBox.addItem("Seleccione la ciudad ");
-		comboBox.addItem("BILBAO ");
-		comboBox.addItem("MADRID ");
-		comboBox.addItem("BARCELONA ");
-		comboBox.addItem("SEVILLA ");
-		comboBox.addItem("SANTANDER ");
-		comboBox.addItem("VALENCIA ");
+		comboBox.addItem("BILBAO");
+		comboBox.addItem("MADRID");
+		comboBox.addItem("BARCELONA");
+		comboBox.addItem("SEVILLA");
+		comboBox.addItem("SANTANDER");
+		comboBox.addItem("VALENCIA");
 		
 		JButton btnBuscar = new JButton("Buscar");
 		btnBuscar.addActionListener(new ActionListener() {
