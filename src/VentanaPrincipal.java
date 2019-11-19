@@ -57,19 +57,12 @@ public class VentanaPrincipal extends JFrame {
 		comboBox.setBounds(36, 108, 295, 41);
 		contentPane.add(comboBox);
 		
-		comboBox.addItem("Seleccione la ciudad ");
-		comboBox.addItem("BILBAO");
-		comboBox.addItem("MADRID");
-		comboBox.addItem("BARCELONA");
-		comboBox.addItem("SEVILLA");
-		comboBox.addItem("SANTANDER");
-		comboBox.addItem("VALENCIA");
 		
 		JButton btnBuscar = new JButton("Buscar");
 		btnBuscar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				if(comboBox.getSelectedItem().equals("BILBAO")) {
+				if(comboBox.getSelectedItem().toString().equals("BILBAO")) {
 					VentanaBilbao nuevaVentana = new VentanaBilbao();
 					nuevaVentana.setVisible(true);
 					VentanaPrincipal.this.dispose();
@@ -148,7 +141,13 @@ public class VentanaPrincipal extends JFrame {
 		spinner_1.setBounds(260, 226, 41, 39);
 		contentPane.add(spinner_1);
 		
-	
+		comboBox.addItem("Seleccione la ciudad ");
+		comboBox.addItem("BILBAO");
+		comboBox.addItem("MADRID");
+		comboBox.addItem("BARCELONA");
+		comboBox.addItem("SEVILLA");
+		comboBox.addItem("SANTANDER");
+		comboBox.addItem("VALENCIA");
 		
 		JLabel lblNewLabel_3 = new JLabel("de hoteles");
 		lblNewLabel_3.setBounds(354, 137, 72, 16);
