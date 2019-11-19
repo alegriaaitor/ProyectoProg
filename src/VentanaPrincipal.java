@@ -1,5 +1,5 @@
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.*;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -7,8 +7,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import java.awt.event.*;
 import java.awt.Color;
 import java.awt.SystemColor;
 import javax.swing.UIManager;
@@ -59,15 +58,20 @@ public class VentanaPrincipal extends JFrame {
 		
 		
 		JButton btnBuscar = new JButton("Buscar");
-		btnBuscar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				String x = String.valueOf(comboBox.getSelectedItem());
-				if(x.equals("BILBAO")) {
-					VentanaBilbao nuevaVentana = new VentanaBilbao();
-					nuevaVentana.setVisible(true);
-					VentanaPrincipal.this.dispose();
-				}
+		btnBuscar.addItemListener(new ItemListener() {
+
+			@Override
+			public void itemStateChanged(ItemEvent arg0) {
+				Object item = comboBox.getSelectedItem();
+                if ("BILBAO".equals(item)) {
+                	VentanaBilbao nuevaVentana = new VentanaBilbao();
+    				nuevaVentana.setVisible(true);
+    				VentanaPrincipal.this.dispose();
+                }
+				
 			}
+			
+			
 		});
 		btnBuscar.setBounds(119, 287, 126, 31);
 		contentPane.add(btnBuscar);
