@@ -122,5 +122,9 @@ public class VentanaBilbao extends JFrame {
 		JButton button_2 = new JButton("VER HOTEL\r\n");
 		button_2.setBounds(486, 360, 97, 25);
 		contentPane.add(button_2);
+		
+		JLabel lblBilbao = new JLabel("BILBAO");
+		lblBilbao.setBounds(42, 11, 46, 14);
+		contentPane.add(lblBilbao);
 	}
 }
