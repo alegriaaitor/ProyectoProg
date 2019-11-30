@@ -1,6 +1,8 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -125,18 +127,62 @@ public class VentanaBilbao extends JFrame {
 		JButton btnNewButton = new JButton("VER HOTEL\r\n");
 		btnNewButton.setBounds(503, 81, 130, 25);
 		contentPane.add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaHotel nuevaVentana = new VentanaHotel();
+				nuevaVentana.setVisible(true);
+				VentanaBilbao.this.dispose();
+				
+			}
+			
+		});
 		
 		JButton button = new JButton("VER HOTEL\r\n");
 		button.setBounds(503, 175, 130, 25);
 		contentPane.add(button);
+		button.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaHotel nuevaVentana = new VentanaHotel();
+				nuevaVentana.setVisible(true);
+				VentanaBilbao.this.dispose();
+				
+			}
+			
+		});
 		
 		JButton button_1 = new JButton("VER HOTEL\r\n");
 		button_1.setBounds(503, 292, 130, 25);
 		contentPane.add(button_1);
+		button_1.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaHotel nuevaVentana = new VentanaHotel();
+				nuevaVentana.setVisible(true);
+				VentanaBilbao.this.dispose();
+				
+			}
+			
+		});
 		
 		JButton button_2 = new JButton("VER HOTEL\r\n");
 		button_2.setBounds(503, 376, 130, 25);
 		contentPane.add(button_2);
+		button_2.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaHotel nuevaVentana = new VentanaHotel();
+				nuevaVentana.setVisible(true);
+				VentanaBilbao.this.dispose();
+				
+			}
+			
+		});
 		
 		JLabel lblNewLabel_1 = new JLabel("No disponible");
 		lblNewLabel_1.setForeground(Color.RED);
