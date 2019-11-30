@@ -53,7 +53,7 @@ public class VentanaBilbao extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(25, 25, 100, 81);
+		lblNewLabel.setBounds(12, 13, 128, 91);
 		
 		ImageIcon ico = new ImageIcon(getClass().getResource("Ilunion.jpg"));
 		ImageIcon img = new ImageIcon(ico.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
@@ -61,15 +61,24 @@ public class VentanaBilbao extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JLabel label = new JLabel("");
-		label.setBounds(35, 119, 100, 81);
+		label.setBounds(12, 119, 123, 81);
+		ImageIcon ico1 = new ImageIcon(getClass().getResource("Ercilla.jpg"));
+		ImageIcon img1 = new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
+		label.setIcon(img1);
 		contentPane.add(label);
 		
 		JLabel label_1 = new JLabel("");
-		label_1.setBounds(25, 320, 100, 81);
+		label_1.setBounds(12, 320, 128, 94);
+		ImageIcon ico2 = new ImageIcon(getClass().getResource("Gran Bilbao.jpg"));
+		ImageIcon img2 = new ImageIcon(ico2.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
+		label_1.setIcon(img2);
 		contentPane.add(label_1);
 		
 		JLabel label_2 = new JLabel("");
-		label_2.setBounds(25, 213, 100, 81);
+		label_2.setBounds(12, 213, 128, 94);
+		ImageIcon ico3 = new ImageIcon(getClass().getResource("Hesperia.jpg"));
+		ImageIcon img3 = new ImageIcon(ico3.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
+		label_2.setIcon(img3);
 		contentPane.add(label_2);
 		
 		txtIlunionBilbao = new JTextField();
