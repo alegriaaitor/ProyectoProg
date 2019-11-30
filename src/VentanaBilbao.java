@@ -107,7 +107,7 @@ public class VentanaBilbao extends JFrame {
 		contentPane.add(txtrHotelSituadoEn);
 		
 		JTextArea txtrLaUbicacinDe = new JTextArea();
-		txtrLaUbicacinDe.setText("La ubicaci\u00F3n de este hotel\r\nes inmejorable, a menos de 5\r\nminutos del metro y en pleno centro");
+		txtrLaUbicacinDe.setText("La ubicaci\u00F3n de este hotel\r\nes inmejorable, a menos de 5\r\nminutos del metro y en pleno centro.");
 		txtrLaUbicacinDe.setEditable(false);
 		txtrLaUbicacinDe.setBounds(154, 148, 337, 58);
 		contentPane.add(txtrLaUbicacinDe);
