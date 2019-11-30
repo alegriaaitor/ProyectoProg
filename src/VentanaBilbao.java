@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Image;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -10,15 +11,17 @@ import javax.swing.JTextPane;
 import javax.swing.JTextArea;
 import javax.swing.JList;
 import javax.swing.JTextField;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import java.awt.Color;
 
 public class VentanaBilbao extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField txtIlunionBilbao;
+	private JTextField txtHotelErcilla;
+	private JTextField txtHesperiaBilbao;
+	private JTextField txtHotelGranBilbao;
 
 	/**
 	 * Launch the application.
@@ -41,90 +44,122 @@ public class VentanaBilbao extends JFrame {
 	 */
 	public VentanaBilbao() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 663, 461);
+		setBounds(100, 100, 663, 469);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(42, 25, 100, 81);
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBounds(25, 25, 100, 81);
+		
+		ImageIcon ico = new ImageIcon(getClass().getResource("Ilunion.jpg"));
+		ImageIcon img = new ImageIcon(ico.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
+		lblNewLabel.setIcon(img);
 		contentPane.add(lblNewLabel);
 		
-		JLabel label = new JLabel("New label");
-		label.setBounds(42, 119, 100, 81);
+		JLabel label = new JLabel("");
+		label.setBounds(35, 119, 100, 81);
 		contentPane.add(label);
 		
-		JLabel label_1 = new JLabel("New label");
-		label_1.setBounds(42, 320, 100, 81);
+		JLabel label_1 = new JLabel("");
+		label_1.setBounds(25, 320, 100, 81);
 		contentPane.add(label_1);
 		
-		JLabel label_2 = new JLabel("New label");
-		label_2.setBounds(42, 213, 100, 81);
+		JLabel label_2 = new JLabel("");
+		label_2.setBounds(25, 213, 100, 81);
 		contentPane.add(label_2);
 		
-		textField = new JTextField();
-		textField.setEditable(false);
-		textField.setBounds(152, 25, 161, 22);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtIlunionBilbao = new JTextField();
+		txtIlunionBilbao.setText("ILUNION BILBAO");
+		txtIlunionBilbao.setEditable(false);
+		txtIlunionBilbao.setBounds(152, 25, 161, 22);
+		contentPane.add(txtIlunionBilbao);
+		txtIlunionBilbao.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setEditable(false);
-		textField_1.setBounds(152, 121, 161, 22);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		txtHotelErcilla = new JTextField();
+		txtHotelErcilla.setText("HOTEL ERCILLA");
+		txtHotelErcilla.setEditable(false);
+		txtHotelErcilla.setBounds(152, 121, 161, 22);
+		contentPane.add(txtHotelErcilla);
+		txtHotelErcilla.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setEditable(false);
-		textField_2.setBounds(152, 213, 161, 22);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		txtHesperiaBilbao = new JTextField();
+		txtHesperiaBilbao.setText("HESPERIA BILBAO");
+		txtHesperiaBilbao.setEditable(false);
+		txtHesperiaBilbao.setBounds(152, 213, 161, 22);
+		contentPane.add(txtHesperiaBilbao);
+		txtHesperiaBilbao.setColumns(10);
 		
-		textField_3 = new JTextField();
-		textField_3.setEditable(false);
-		textField_3.setBounds(152, 320, 161, 22);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		txtHotelGranBilbao = new JTextField();
+		txtHotelGranBilbao.setText("HOTEL GRAN BILBAO");
+		txtHotelGranBilbao.setEditable(false);
+		txtHotelGranBilbao.setBounds(152, 320, 161, 22);
+		contentPane.add(txtHotelGranBilbao);
+		txtHotelGranBilbao.setColumns(10);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setEditable(false);
-		textArea.setBounds(154, 54, 281, 52);
-		contentPane.add(textArea);
+		JTextArea txtrHotelSituadoEn = new JTextArea();
+		txtrHotelSituadoEn.setText("Hotel situado en plena zona comercial \r\nde Bilbao, a menos de 100 metros de \r\nestaciones de buses y metro. ");
+		txtrHotelSituadoEn.setEditable(false);
+		txtrHotelSituadoEn.setBounds(154, 54, 337, 54);
+		contentPane.add(txtrHotelSituadoEn);
 		
-		JTextArea textArea_1 = new JTextArea();
-		textArea_1.setEditable(false);
-		textArea_1.setBounds(154, 148, 281, 52);
-		contentPane.add(textArea_1);
+		JTextArea txtrLaUbicacinDe = new JTextArea();
+		txtrLaUbicacinDe.setText("La ubicaci\u00F3n de este hotel\r\nes inmejorable, a menos de 5\r\nminutos del metro y en pleno centro");
+		txtrLaUbicacinDe.setEditable(false);
+		txtrLaUbicacinDe.setBounds(154, 148, 337, 58);
+		contentPane.add(txtrLaUbicacinDe);
 		
-		JTextArea textArea_2 = new JTextArea();
-		textArea_2.setEditable(false);
-		textArea_2.setBounds(154, 248, 281, 52);
-		contentPane.add(textArea_2);
+		JTextArea txtrElHesperiaBilbao = new JTextArea();
+		txtrElHesperiaBilbao.setText("El Hesperia Bilbao est\u00E1 situado enfrente \r\ndel Museo Guggenheim de Bilbao, justo al \r\notro lado del r\u00EDo Nervi\u00F3n, y presenta una fachada de \r\ncristal de colores muy llamativa.");
+		txtrElHesperiaBilbao.setEditable(false);
+		txtrElHesperiaBilbao.setBounds(154, 242, 337, 75);
+		contentPane.add(txtrElHesperiaBilbao);
 		
-		JTextArea textArea_3 = new JTextArea();
-		textArea_3.setEditable(false);
-		textArea_3.setBounds(154, 349, 281, 52);
-		contentPane.add(textArea_3);
+		JTextArea txtrEsteEleganteHotel = new JTextArea();
+		txtrEsteEleganteHotel.setText("Este elegante hotel de dise\u00F1o ofrece WiFi \r\ngratuita y habitaciones amplias con TV v\u00EDa \r\nsat\u00E9lite de pantalla plana.\r\n");
+		txtrEsteEleganteHotel.setEditable(false);
+		txtrEsteEleganteHotel.setBounds(154, 349, 337, 65);
+		contentPane.add(txtrEsteEleganteHotel);
 		
 		JButton btnNewButton = new JButton("VER HOTEL\r\n");
-		btnNewButton.setBounds(486, 72, 97, 25);
+		btnNewButton.setBounds(503, 81, 130, 25);
 		contentPane.add(btnNewButton);
 		
 		JButton button = new JButton("VER HOTEL\r\n");
-		button.setBounds(486, 161, 97, 25);
+		button.setBounds(503, 175, 130, 25);
 		contentPane.add(button);
 		
 		JButton button_1 = new JButton("VER HOTEL\r\n");
-		button_1.setBounds(486, 258, 97, 25);
+		button_1.setBounds(503, 292, 130, 25);
 		contentPane.add(button_1);
 		
 		JButton button_2 = new JButton("VER HOTEL\r\n");
-		button_2.setBounds(486, 360, 97, 25);
+		button_2.setBounds(503, 376, 130, 25);
 		contentPane.add(button_2);
 		
-		JLabel lblBilbao = new JLabel("BILBAO");
-		lblBilbao.setBounds(42, 11, 46, 14);
-		contentPane.add(lblBilbao);
+		JLabel lblNewLabel_1 = new JLabel("No disponible");
+		lblNewLabel_1.setForeground(Color.RED);
+		lblNewLabel_1.setBounds(334, 25, 100, 16);
+		contentPane.add(lblNewLabel_1);
+		lblNewLabel_1.setVisible(false);
+		
+		JLabel label_3 = new JLabel("No disponible");
+		label_3.setForeground(Color.RED);
+		label_3.setBounds(334, 124, 100, 16);
+		contentPane.add(label_3);
+		label_3.setVisible(false);
+		
+		JLabel label_4 = new JLabel("No disponible");
+		label_4.setForeground(Color.RED);
+		label_4.setBounds(334, 213, 100, 16);
+		contentPane.add(label_4);
+		label_4.setVisible(false);
+		
+		JLabel label_5 = new JLabel("No disponible");
+		label_5.setForeground(Color.RED);
+		label_5.setBounds(334, 320, 100, 16);
+		contentPane.add(label_5);
+		label_5.setVisible(false);
 	}
 }
