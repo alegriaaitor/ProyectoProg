@@ -58,21 +58,6 @@ public class VentanaPrincipal extends JFrame {
 		
 		
 		JButton btnBuscar = new JButton("Buscar");
-		btnBuscar.addItemListener(new ItemListener() {
-
-			@Override
-			public void itemStateChanged(ItemEvent arg0) {
-				Object item = comboBox.getSelectedItem();
-                if ("BILBAO".equals(item)) {
-                	VentanaBilbao nuevaVentana = new VentanaBilbao();
-    				nuevaVentana.setVisible(true);
-    				VentanaPrincipal.this.dispose();
-                }
-				
-			}
-			
-			
-		});
 		btnBuscar.setBounds(119, 287, 126, 31);
 		contentPane.add(btnBuscar);
 		
@@ -91,11 +76,14 @@ public class VentanaPrincipal extends JFrame {
 		
 		JButton btnIniciarSesion = new JButton("Iniciar Sesion");
 		btnIniciarSesion.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
 				VentanaLogin nuevaVentana = new VentanaLogin();
 				nuevaVentana.setVisible(true);
 				VentanaPrincipal.this.dispose();
 			}
+		
 		});
 		btnIniciarSesion.setBounds(309, 23, 116, 25);
 		contentPane.add(btnIniciarSesion);
