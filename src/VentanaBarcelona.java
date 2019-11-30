@@ -173,7 +173,7 @@ public class VentanaBarcelona extends JFrame {
 		JButton btnVerHotel_3 = new JButton("VER HOTEL");
 		btnVerHotel_3.setBounds(468, 334, 121, 25);
 		contentPane.add(btnVerHotel_3);
-		btnVerHotel_3.addActionListener(new ActionListener(){
+		btnVerHotel_3.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
