@@ -59,6 +59,39 @@ public class VentanaPrincipal extends JFrame {
 		
 		JButton btnBuscar = new JButton("Buscar");
 		btnBuscar.setBounds(119, 287, 126, 31);
+		btnBuscar.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(comboBox.getSelectedItem().equals("BILBAO")) {
+					VentanaBilbao nuevaVentana = new VentanaBilbao();
+					nuevaVentana.setVisible(true);
+					VentanaPrincipal.this.dispose();	
+				}else if(comboBox.getSelectedItem().equals("BARCELONA")) {
+					VentanaBarcelona nuevaVentana = new VentanaBarcelona();
+					nuevaVentana.setVisible(true);
+					VentanaPrincipal.this.dispose();
+				}else if(comboBox.getSelectedItem().equals("MADRID")) {
+					VentanaMadrid nuevaVentana = new VentanaMadrid();
+					nuevaVentana.setVisible(true);
+					VentanaPrincipal.this.dispose();
+				}else if(comboBox.getSelectedItem().equals("SEVILLA")) {
+					VentanaSevilla nuevaVentana = new VentanaSevilla();
+					nuevaVentana.setVisible(true);
+					VentanaPrincipal.this.dispose();
+				}else if(comboBox.getSelectedItem().equals("VALENCIA")) {
+					VentanaValencia nuevaVentana = new VentanaValencia();
+					nuevaVentana.setVisible(true);
+					VentanaPrincipal.this.dispose();
+				}else if(comboBox.getSelectedItem().equals("SANTANDER")) {
+					VentanaSantander nuevaVentana = new VentanaSantander();
+					nuevaVentana.setVisible(true);
+					VentanaPrincipal.this.dispose();
+				}
+				
+			}
+			
+		});
 		contentPane.add(btnBuscar);
 		
 		txtCheckIn = new JTextField();

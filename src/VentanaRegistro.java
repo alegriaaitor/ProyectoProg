@@ -1,7 +1,9 @@
-import java.awt.BorderLayout;
+import java.awt.*;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
@@ -73,7 +75,15 @@ public class VentanaRegistro extends JFrame {
 		
 		JButton btnIniciarSesin = new JButton("Iniciar sesi\u00F3n");
 		btnIniciarSesin.setBounds(295, 215, 116, 25);
+		btnIniciarSesin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaLogin nuevaVentana = new VentanaLogin();
+				nuevaVentana.setVisible(true);
+				VentanaRegistro.this.dispose();
+			}
+		});
 		contentPane.add(btnIniciarSesin);
+	
 		
 		JLabel lblDni = new JLabel("DNI:");
 		lblDni.setBounds(12, 161, 56, 16);
